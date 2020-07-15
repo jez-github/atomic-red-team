@@ -1,18 +1,11 @@
-# Atomic Red Team Execution Frameworks
-Execution frameworks help you run Atomic Tests in your environment. 
-Each atomic test is defined in the [atomics folder](https://github.com/redcanaryco/atomic-red-team/tree/master/execution-frameworks) inside their respective Mitre Att&ck T# folders. 
-Within each T# folder you will find a yaml file that defines the commands to be run during the test, and an easier to read markdown (md) version of the same thing.
-Here is an [example markdown file](https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003/T1003.md) describing some of the tests that can be run using one of the below execution frameworks. 
+Invoke-AtomicRedTeam is a PowerShell module to execute tests as defined in the [atomics folder](https://github.com/redcanaryco/atomic-red-team/tree/master/atomics) of Red Canary's Atomic Red Team project. The "atomics folder" contains a folder for each Technique defined by the [MITRE ATT&CK™ Framework](https://attack.mitre.org/matrices/enterprise/). Inside of each of these "T#" folders you'll find a **yaml** file that defines the attack procedures for each atomic test as well as an easier to read markdown (**md**) version of the same data.
 
-## Invoke-AtomicRedTeam
+* Executing atomic tests may leave your system in an undesirable state. You are responsible for understanding what a test does before executing.
 
-Invoke-AtomicRedTeam is written in PowerShell, which can be executed cross-platform using PowerShell Core for Linux and MacOS.  
-For detailed installation and usage instructions refer to the [README](https://github.com/redcanaryco/invoke-atomicredteam) file. Note that this execution framework exists in a separate GitHub Repository [here](https://github.com/redcanaryco/invoke-atomicredteam).
+* Ensure you have permission to test before you begin.
 
-## Python
+* It is recommended to set up a test machine for atomic test execution that is similar to the build in your environment. Be sure you have your collection/EDR solution in place, and that the endpoint is checking in and active.
 
-Surprise, this framework is written in Python. For detailed installation and usage instructions refer to the [README](https://github.com/redcanaryco/atomic-red-team/tree/master/execution-frameworks/contrib/python) file inside of the **_contrib/python_** folder.
+See the Wiki for complete [Installation and Usage instructions](https://github.com/redcanaryco/invoke-atomicredteam/wiki).
 
-## Ruby
-
-Ruby version of the execution framework.
+Note: This execution framworks works on Windows, MacOS and Linux. If using on MacOS or Linux you must install PowerShell Core first.
